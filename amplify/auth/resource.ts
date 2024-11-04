@@ -13,9 +13,5 @@ export const auth = defineAuth({
       fromEmail: "k.honda@seeds-std.co.jp"
     }
   },
-  multifactor:{
-    mode:"REQUIRED",
-    totp:true
-  },
   accountRecovery:"PHONE_WITHOUT_MFA_AND_EMAIL",  
 });

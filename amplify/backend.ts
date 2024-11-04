@@ -11,3 +11,5 @@ const { cfnUserPool } = backend.auth.resources.cfnResources
 cfnUserPool.userPoolAddOns = {
   advancedSecurityMode: "AUDIT"
 };
+cfnUserPool.mfaConfiguration = "ON",
+cfnUserPool.enabledMfas = ['EMAIL_OTP']
