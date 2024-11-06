@@ -12,7 +12,17 @@ Amplify.configure(outputs);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   
   <React.StrictMode>
-    <Authenticator>
+    <Authenticator
+    formFields={{
+    confirmSignIn: {
+      EMAIL_OTP: {
+        labelHidden: false,
+        placeholder: "Enter your OTP",
+        required: true,
+      },
+    },
+  }}
+>
       <App />
     </Authenticator>
   </React.StrictMode>
