@@ -6,20 +6,23 @@ import AWS from 'aws-sdk';
  * @see https://docs.amplify.aws/gen2/build-a-backend/auth
  */
 
+const lambda = new AWS.Lambda();
+
 async function sayhello() {
   const params = {
       FunctionName: 'sayhello', // 作成したLambda関数名
       Payload: JSON.stringify,
   };
 
-  const response = await lambda.invoke(params).promise();
-  const result = JSON.parse(response.Payload);
+  /*const response = await lambda.invoke(params).promise();
+  //const result = JSON.parse(response);
 
   if (response.StatusCode !== 200 || !result.body) {
       throw new Error('Failed to fetch SAML provider settings');
   }
+      */
 
-  return JSON.parse(result.body);
+  //return JSON.parse(result.body);
 }
 
 const samlSettings = await sayhello();
