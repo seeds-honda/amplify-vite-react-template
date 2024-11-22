@@ -27,6 +27,7 @@ async function sayhello() {
 
 const samlSettings = await sayhello();
 console.log(samlSettings);
+console.log("aaaaaa";
 
 export const auth = defineAuth({
 
